@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace PlanIt.Models
 {
-  public class ExecutiveSummary
+  public class BusExecSummary
   {
 
       public int SummaryId { get; set; }

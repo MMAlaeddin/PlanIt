@@ -10,6 +10,27 @@ namespace PlanIt.Controllers
 {
   public class BusExecSummaryController : Controller
   {
-    
+    private readonly PlanItContext _db; 
+
+    public BusExecSummaryController(PlanItContext db)
+    {
+      _db = db;
+    }
+    public ActionResult Index()
+    {
+      // List<Summary> model = _db.BusExecSummary.ToList();
+      return View();
+    }
+    public ActionResult Create()
+    {
+      return View();
+    }
+    [HttpPost]
+    public ActionResult Create(BusExecSummary summary)
+    {
+      _db.Summary.Add(summary);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
