@@ -8,6 +8,10 @@
 
 _A business planning application that allows entrepreneurs to create their proposal and bring their business to life!  The application will allow the user to follow along a step-by-step process of building a clean proposal for their next venture and future investors._
 
+## Component Diagram
+
+<img width="974" alt="Screen Shot 2020-05-08 at 11 02 14 AM" src="https://user-images.githubusercontent.com/58479140/81457064-a5e35280-9149-11ea-97c2-221d25413dc9.png">
+
 ## Business Driven Development
 | Behavior | Input | Output |
 |----------|:-----:|--------|
