@@ -62,3 +62,8 @@ body {
 .itColor {
   color: rgb(76, 173, 84);
 }
+
+#logo {
+  width: 100%;
+  height: auto;
+}
