@@ -2966,6 +2966,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary.cshtml/Create.cshtml",
+      "TargetPath": "Views\\BusExecSummary.cshtml\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
