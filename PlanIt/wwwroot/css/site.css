@@ -56,14 +56,14 @@ body {
 }
 
 .planColor {
-  color: rgb(58, 121, 204);
+  color: rgb(26, 54, 92);
 }
 
 .itColor {
-  color: rgb(76, 173, 84);
+  color: rgb(19, 82, 0);
 }
 
 #logo {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
