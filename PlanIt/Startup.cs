@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PlanIt.Models;
+// using Microsoft.AspNetCore.Identity;
 
 namespace PlanIt
 {
@@ -13,6 +16,7 @@ namespace PlanIt
       var builder = new ConfigurationBuilder()
           .SetBasePath(env.ContentRootPath)
           .AddEnvironmentVariables();
+          // .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
@@ -21,6 +25,16 @@ namespace PlanIt
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc();
+
+      services.AddEntityFrameworkMySql()
+      .AddDbContext<PlanItContext>(options => options
+      .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+
+      
+      // services.AddIdentity<ApplicationUser, IdentityRole>()
+      // .AddEntityFrameworkStores<PlanItContext>()
+      // .AddDefaultTokenProviders();
+    
     }
 
     public void Configure(IApplicationBuilder app)
@@ -28,6 +42,8 @@ namespace PlanIt
       app.UseStaticFiles();
 
       app.UseDeveloperExceptionPage();
+
+      // app.UseAuthentication();
 
       app.UseMvc(routes =>
       {
@@ -45,6 +61,6 @@ namespace PlanIt
 
   public static class DBConfiguration
   {
-    public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=to_do_list;";
+    public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=plan_it;";
   }
 }
