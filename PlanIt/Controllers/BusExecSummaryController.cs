@@ -18,56 +18,56 @@ namespace PlanIt.Controllers
 
     public ActionResult Index()
     {
-      List<BusExecSummary> model = _db.Summary.Include(summary => summary.SummaryId).ToList();
-      return View(model);
+      // List<BusExecSummary> model = _db.BusExecSummaries.Include(busExecSummaries => busExecSummaries.Category).ToList();
+      return View();
     }
 
     public ActionResult Create()
     {
-      // ViewBag.CategoryId = new SelectList(_db.BusExecSummary, "CategoryId", "Name");
+      // ViewBag.SummaryId = new SelectList(_db.Categories, "SummaryId", "Name");
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(BusExecSummary summary)
+    public ActionResult Create(BusExecSummary busExecSummary)
     {
-      _db.Summary.Add(summary);
+      _db.BusExecSummaries.Add(busExecSummary);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
     {
-      BusExecSummary thisSummary = _db.Summary.FirstOrDefault(summary => summary.SummaryId == id);
-      return View(thisSummary);
+      BusExecSummary thisBusExecSummary = _db.BusExecSummaries.FirstOrDefault(busExecSummaries => busExecSummaries.SummaryId == id);
+      return View(thisBusExecSummary);
     }
 
     public ActionResult Edit(int id)
     {
-      var thisSummary = _db.Summary.FirstOrDefault(summary => summary.SummaryId == id);
-      // ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
-      return View(thisSummary);
+      var thisBusExecSummary = _db.BusExecSummaries.FirstOrDefault(busExecSummaries => busExecSummaries.SummaryId == id);
+      // ViewBag.SummaryId = new SelectList(_db.Categories, "SummaryId", "Name");
+      return View(thisBusExecSummary);
     }
 
     [HttpPost]
-    public ActionResult Edit(BusExecSummary summary)
+    public ActionResult Edit(BusExecSummary busExecSummary)
     {
-      _db.Entry(summary).State = EntityState.Modified;
+      _db.Entry(busExecSummary).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
     {
-      var thisSummary = _db.Summary.FirstOrDefault(summary => summary.SummaryId == id);
-      return View(thisSummary);
+      var thisBusExecSummary = _db.BusExecSummaries.FirstOrDefault(busExecSummaries => busExecSummaries.SummaryId == id);
+      return View(thisBusExecSummary);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisSummary = _db.Summary.FirstOrDefault(summary => summary.SummaryId == id);
-      _db.Summary.Remove(thisSummary);
+      var thisBusExecSummary = _db.BusExecSummaries.FirstOrDefault(items => items.SummaryId == id);
+      _db.BusExecSummaries.Remove(thisBusExecSummary);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

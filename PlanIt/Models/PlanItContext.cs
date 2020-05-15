@@ -5,7 +5,7 @@ namespace PlanIt.Models
 {
   public class PlanItContext : IdentityDbContext<ApplicationUser>
   {
-    public virtual DbSet<BusExecSummary> Summary { get; set; }
+    public virtual DbSet<BusExecSummary> BusExecSummaries { get; set; }
 
     public PlanItContext(DbContextOptions options) : base(options) { }
   }
