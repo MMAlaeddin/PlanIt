@@ -2981,6 +2981,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Index.cshtml",
+      "TargetPath": "Views\\BusExecSummary\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -3013,6 +3018,11 @@
     {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Create.cshtml",
       "TargetPath": "Views\\BusExecSummary\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Delete.cshtml",
+      "TargetPath": "Views\\BusExecSummary\\Delete.cshtml",
       "FileKind": "mvc"
     }
   ],
