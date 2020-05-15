@@ -9,7 +9,7 @@
 
 @if(@Model.Count == 0)
 {
-  <h3>No Summarys have been added yet! Sorry.</h3>
+  <h3>No Summaries have been added yet! Sorry.</h3>
 }
 
 @foreach (BusExecSummary busExecSummary in Model)
@@ -17,5 +17,5 @@
   <button><ul>@Html.ActionLink($"{busExecSummary.SummaryTitle}", "Details", new { id = busExecSummary.SummaryId })</ul></button>
 }
 
-<p>@Html.ActionLink("Add A New Summary", "Create", "summarys")</p>
+<p>@Html.ActionLink("Add A New Summary", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
