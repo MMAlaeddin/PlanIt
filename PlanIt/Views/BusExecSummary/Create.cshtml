@@ -7,6 +7,8 @@
 <h4>Create My Executive Summary</h4>
 @using (Html.BeginForm())
 {
+    @Html.LabelFor(model => model.SummaryTitle)
+    @Html.TextBoxFor(model => model.SummaryTitle)
     @Html.LabelFor(model => model.Intro)
     @Html.TextBoxFor(model => model.Intro)
     @Html.LabelFor(model => model.Problem)

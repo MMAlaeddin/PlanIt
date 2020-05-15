@@ -1,0 +1,25 @@
+  @{
+  Layout = "_Layout";
+}
+
+@model PlanIt.Models.BusExecSummary
+
+<h2>Edit</h2>
+
+<h4>Edit this category: @Html.DisplayFor(model => model.SummaryTitle)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.SummaryId)
+  @Html.LabelFor(model => model.SummaryTitle)
+  @Html.EditorFor(model => model.SummaryTitle)
+  @Html.LabelFor(model => model.Intro)
+  @Html.EditorFor(model => model.Intro)
+  @Html.LabelFor(model => model.Problem)
+  @Html.EditorFor(model => model.Problem)
+  @Html.LabelFor(model => model.Financials)
+  @Html.EditorFor(model => model.Financials)
+
+  <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to Stylists", "Index")</p>
