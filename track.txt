@@ -3,3 +3,5 @@ lunch 148p
 start mvc with angular tutorials 340p
 
 finish first half of tutorial 420p
+
+starting my sql tutorial to get mysql to start working 133p
