@@ -6,7 +6,7 @@ namespace PlanIt.Models
     {
         public ExecSummary()
         {
-            this.BusProposals = new HashSet<BusProposalExecSummary>();
+            this.BusProposals = new HashSet<ExecSummaryBusProposal>();
         }
 
         public int ExecSummaryId { get; set; }
@@ -16,6 +16,6 @@ namespace PlanIt.Models
         public string Finance { get; set; }
         public virtual ApplicationUser User { get; set; }
 
-        public ICollection<BusProposalExecSummary> BusProposals { get;}
+        public ICollection<ExecSummaryBusProposal> BusProposals { get;}
     }
 }

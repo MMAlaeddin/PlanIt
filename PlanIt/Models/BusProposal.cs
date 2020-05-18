@@ -6,11 +6,11 @@ namespace PlanIt.Models
   {
     public BusProposal()
     {
-        this.ExecSummaries = new HashSet<BusProposalExecSummary>();
+        this.ExecSummaries = new HashSet<ExecSummaryBusProposal>();
     }
 
     public int BusProposalId { get; set; }
     public string BusProposalTitle { get; set; }
-    public virtual ICollection<BusProposalExecSummary> ExecSummaries { get; set; }
+    public virtual ICollection<ExecSummaryBusProposal> ExecSummaries { get; set; }
   }
 }

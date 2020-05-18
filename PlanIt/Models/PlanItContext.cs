@@ -5,9 +5,10 @@ namespace PlanIt.Models
 {
   public class PlanItContext : IdentityDbContext<ApplicationUser>
   {
-    public virtual DbSet<BusProposal> BusProposals { get; set; }
     public DbSet<ExecSummary> ExecSummaries { get; set; }
-    public DbSet<BusProposalExecSummary> BusProposalExecSummary { get; set; }
+    public virtual DbSet<BusProposal> BusProposals { get; set; }
+    public DbSet<ExecSummaryBusProposal> ExecSummaryBusPropsal { get; set; }
 
     public PlanItContext(DbContextOptions options) : base(options) { }
   }
+}
