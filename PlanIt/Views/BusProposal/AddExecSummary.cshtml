@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PlanIt.Models.BusProposal
+
+<h2>Add a summary</h2>
+
+<h4>Add a summary to this task: @Html.DisplayFor(model => model.BusProposalTitle)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.BusProposalId)
+
+    @Html.Label("Select proposal")
+    @Html.DropDownList("ExecSummaryId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
