@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PlanIt.Models.BusProposal
+
+<h4>Create a new proposal</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.BusProposalTitle)
+    @Html.TextBoxFor(model => model.BusProposalTitle)
+
+    @Html.Label("Select proposal")
+    @Html.DropDownList("ExecSummaryId")
+
+    <input type="submit" value="Add new proposal" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all proposals", "Index")</p>
