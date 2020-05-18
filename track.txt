@@ -11,3 +11,5 @@ read on gatsby and find tutuorials 330
 revisiting lessons to understand why context, bus proposal and exec summary models are not working: 830a
 
 go through more lessons to fix controller issues 10a
+
+still working on issues 1030a
