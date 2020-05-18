@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PlanIt.Controllers
 {
-  public class ExecSummary : Controller
+  public class ExecSummaryController : Controller
   {
     private readonly PlanItContext _db;
 
-    public ExecSummary(PlanItContext db)
+    public ExecSummaryController(PlanItContext db)
     {
       _db = db;
     }

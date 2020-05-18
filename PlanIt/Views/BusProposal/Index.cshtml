@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PlanIt.Models;
+@using System.Security.Claims
+@model IEnumerable<PlanIt.Models.BusProposal>
+
+<h1>Proposals for @User.Identity.Name</h1>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (BusProposal busProposal in Model)
+    {
+      <li>@Html.ActionLink($"{busProposal.BusProposalTitle}", "Details", new { id = busProposal.BusProposalId })</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No proposals have been added yet!</h3>
+}
+
+<p>@Html.ActionLink("Add new item", "Create")</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
