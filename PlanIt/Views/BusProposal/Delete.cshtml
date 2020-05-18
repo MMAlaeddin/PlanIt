@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PlanIt.Models.BusProposal
+
+<h2>Are you sure you want to delete this?</h2>
+
+@Html.DisplayNameFor(model => model.BusProposalTitle): @Html.DisplayFor(model => model.BusProposalTitle)
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to List", "Index")
