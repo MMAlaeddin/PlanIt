@@ -13,6 +13,6 @@ namespace PlanIt.Models
     public string BusProposalTitle { get; set; }
     public virtual ApplicationUser User { get; set; }
 
-    public virtual ICollection<ExecSummaryBusProposal> ExecSummaries { get; set; }
+    public virtual ICollection<ExecSummaryBusProposal> ExecSummaries { get; }
   }
 }

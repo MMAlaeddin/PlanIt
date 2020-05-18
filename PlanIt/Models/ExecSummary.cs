@@ -16,6 +16,6 @@ namespace PlanIt.Models
         public string Finance { get; set; }
         // public virtual ApplicationUser User { get; set; }
 
-        public ICollection<ExecSummaryBusProposal> BusProposals { get;}
+        public ICollection<ExecSummaryBusProposal> BusProposals { get; set; }
     }
 }
