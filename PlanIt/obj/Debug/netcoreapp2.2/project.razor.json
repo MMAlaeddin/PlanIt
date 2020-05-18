@@ -2971,6 +2971,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusProposal/Details.cshtml",
+      "TargetPath": "Views\\BusProposal\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusProposal/Create.cshtml",
       "TargetPath": "Views\\BusProposal\\Create.cshtml",
       "FileKind": "mvc"

@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PlanIt.Models.BusProposal
+
+<h2>Proposal Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.BusProposalTitle): @Html.DisplayFor(model => model.BusProposalTitle)</h3>
+
+@if(@Model.ExecSummaries.Count == 0)
+{
+  <p>This proposal does not belong to any Summaries</p>
+}
+else
+{
+  <h4>Summaries the proposal belongs to:</h4>
+  <ul>
+  @foreach(var join in Model.ExecSummaries)
+  {
+    <li>@join.ExecSummary.ExecSummaryTitle</li>
+    @using (Html.BeginForm("DeleteExecSummary", "BusProposals"))
+    {
+      @Html.Hidden("joinId", @join.ExecSummaryBusProposalId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit BusProposal", "Edit", new { id = Model.BusProposalId })</p>
+<p>@Html.ActionLink("Add a ExecSummary", "AddExecSummary", new { id = Model.BusProposalId })</p>
+<p>@Html.ActionLink("Delete BusProposal", "Delete", new { id = Model.BusProposalId })</p>
