@@ -1,20 +1,37 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
 @using PlanIt.Models;
-@model PlanIt.Models.BusExecSummary;
+@model PlanIt.Models.ExecSummary;
 
 <h2>Summary Details</h2>
 <hr />
-<h1>@Html.DisplayNameFor(model => model.SummaryTitle): @Html.DisplayFor(model => model.SummaryTitle)</h1>
+
+@if(@Model.BusProposals.Count == 0)
+{
+  <p>This summary does not contain any proposal</p>
+}
+else
+{
+  <h4>BusProposals the category contains:</h4>
+  <ul>
+  @foreach(var join in Model.BusProposals)
+  {
+    <li>@join.Busproposal.BusProposalTitle</li>
+  }
+  </ul>
+}
+
+@* <h1>@Html.DisplayNameFor(model => model.ExecSummaryTitle): @Html.DisplayFor(model => model.ExecSummaryTitle)</h1>
+
 <h4>@Html.DisplayNameFor(model => model.Intro): @Html.DisplayFor(model => model.Intro)</h4>
 <h4>@Html.DisplayNameFor(model => model.Problem): @Html.DisplayFor(model => model.Problem)</h4>
-<h4>@Html.DisplayNameFor(model => model.Financials): @Html.DisplayFor(model => model.Financials)</h4>
+<h4>@Html.DisplayNameFor(model => model.Finance): @Html.DisplayFor(model => model.Finance)</h4> *@
 
 <hr />
 <p>@Html.ActionLink("Back to Dashboard", "Index")</p>
-<p>@Html.ActionLink("Edit Summary", "Edit", new { id = Model.SummaryId })</p>
+<p>@Html.ActionLink("Edit Summary", "Edit", new { id = Model.ExecSummaryId })</p>
 
 <hr/>
-<p>@Html.ActionLink("Delete Summary", "Delete", new { id = Model.SummaryId })</p> *@
+<p>@Html.ActionLink("Delete Summary", "Delete", new { id = Model.ExecSummaryId })</p>

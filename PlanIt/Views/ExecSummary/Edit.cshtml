@@ -1,25 +1,25 @@
-  @* @{
+  @{
   Layout = "_Layout";
 }
 
-@model PlanIt.Models.BusExecSummary
+@model PlanIt.Models.ExecSummary
 
 <h2>Edit</h2>
 
-<h4>Edit this category: @Html.DisplayFor(model => model.SummaryTitle)</h4>
+<h4>Edit this category: @Html.DisplayFor(model => model.ExecSummaryTitle)</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.SummaryId)
-  @Html.LabelFor(model => model.SummaryTitle)
-  @Html.EditorFor(model => model.SummaryTitle)
+  @Html.HiddenFor(model => model.ExecSummaryId)
+  @Html.LabelFor(model => model.ExecSummaryTitle)
+  @Html.EditorFor(model => model.ExecSummaryTitle)
   @Html.LabelFor(model => model.Intro)
   @Html.EditorFor(model => model.Intro)
   @Html.LabelFor(model => model.Problem)
   @Html.EditorFor(model => model.Problem)
-  @Html.LabelFor(model => model.Financials)
-  @Html.EditorFor(model => model.Financials)
+  @Html.LabelFor(model => model.Finance)
+  @Html.EditorFor(model => model.Finance)
 
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to Stylists", "Index")</p> *@
+<p>@Html.ActionLink("Back to Stylists", "Index")</p>

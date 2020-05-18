@@ -18,6 +18,7 @@ namespace PlanIt.Controllers
       _signInManager = signInManager;
       _db = db;
     }
+
     public ActionResult Index()
     {
       return View();
@@ -27,6 +28,7 @@ namespace PlanIt.Controllers
     {
       return View();
     }
+
     [HttpPost]
     public async Task<ActionResult> Register(RegisterViewModel model)
     {
@@ -41,10 +43,12 @@ namespace PlanIt.Controllers
         return View();
       }
     }
+
     public ActionResult Login()
     {
       return View();
     }
+
     [HttpPost]
     public async Task<ActionResult> Login(LoginViewModel model)
     {
@@ -58,6 +62,7 @@ namespace PlanIt.Controllers
         return View();
       }
     }
+
     [HttpPost]
     public async Task<ActionResult> LogOff()
     {

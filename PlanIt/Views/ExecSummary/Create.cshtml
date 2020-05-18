@@ -1,20 +1,20 @@
-  @* @{
+  @{
   Layout = "_Layout";
 }
 
-@model PlanIt.Models.BusExecSummary
+@model PlanIt.Models.ExecSummary
 
 <h4>Create My Executive Summary</h4>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.SummaryTitle)
-    @Html.TextBoxFor(model => model.SummaryTitle)
+    @Html.LabelFor(model => model.ExecSummaryTitle)
+    @Html.TextBoxFor(model => model.ExecSummaryTitle)
     @Html.LabelFor(model => model.Intro)
     @Html.TextBoxFor(model => model.Intro)
     @Html.LabelFor(model => model.Problem)
     @Html.TextBoxFor(model => model.Problem)  
-    @Html.LabelFor(model => model.Financials)
-    @Html.TextBoxFor(model => model.Financials)
+    @Html.LabelFor(model => model.Finance)
+    @Html.TextBoxFor(model => model.Finance)
     <input type="submit" value="Add My Executive Summary" />
 }
-<p>@Html.ActionLink("Show My Summary!", "Index")</p> *@
+<p>@Html.ActionLink("Show My Summary!", "Index")</p>
