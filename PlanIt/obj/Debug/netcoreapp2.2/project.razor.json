@@ -2966,11 +2966,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Edit.cshtml",
-      "TargetPath": "Views\\BusExecSummary\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/Account/Register.cshtml",
       "TargetPath": "Views\\Account\\Register.cshtml",
       "FileKind": "mvc"
@@ -2978,6 +2973,21 @@
     {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/Account/Index.cshtml",
       "TargetPath": "Views\\Account\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/ExecSummary/Create.cshtml",
+      "TargetPath": "Views\\ExecSummary\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/ExecSummary/Edit.cshtml",
+      "TargetPath": "Views\\ExecSummary\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/ExecSummary/Delete.cshtml",
+      "TargetPath": "Views\\ExecSummary\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2991,8 +3001,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Index.cshtml",
-      "TargetPath": "Views\\BusExecSummary\\Index.cshtml",
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/ExecSummary/Index.cshtml",
+      "TargetPath": "Views\\ExecSummary\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3016,28 +3026,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Details.cshtml",
-      "TargetPath": "Views\\BusExecSummary\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/ExecSummary/Details.cshtml",
+      "TargetPath": "Views\\ExecSummary\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Create.cshtml",
-      "TargetPath": "Views\\BusExecSummary\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/Views/BusExecSummary/Delete.cshtml",
-      "TargetPath": "Views\\BusExecSummary\\Delete.cshtml",
       "FileKind": "mvc"
     }
   ],

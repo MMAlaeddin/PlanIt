@@ -7,3 +7,5 @@ finish first half of tutorial 420p
 starting my sql tutorial to get mysql to start working 133p
 
 read on gatsby and find tutuorials 330
+
+revisiting lessons to understand why context, bus proposal and exec summary models are not working: 830a
