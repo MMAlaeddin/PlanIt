@@ -1,4 +1,3 @@
-
 namespace PlanIt.ViewModels
 {
   public class LoginViewModel
