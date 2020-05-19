@@ -16,16 +16,13 @@ Layout = "_Layout";
 }
 else
 {
-   @* @using (Html.BeginForm("Register", "Account"))
-  {
-    <button type="submit" class="btn btn-info">Register Here</button>
-  } *@
+  <div class="row">
+    @* <div class="col-sm-4"> *@
   <p><button type="submit" class="btn btn-info">@Html.ActionLink("Register", "Register")</button></p>
-   @* @using (Html.BeginForm("Login", "Account"))
-  {
-    <button type="submit" class="btn btn-info">Log in</button>
-  } *@
+  <hr/>
+
   <p><button type="submit" class="btn btn-info">@Html.ActionLink("Log in", "Login")</button></p>
+
+</div>
 }
 
-<p><button type="submit" class="btn btn-info">@Html.ActionLink("Home", "Index", "Home")</button></p>

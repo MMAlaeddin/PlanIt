@@ -5,16 +5,21 @@
 @using PlanIt.ViewModels
 
 @model LoginViewModel
-
+<div class="w3-container w3-green">
 <h2>Log in with your account</h2>
+</div>
 <hr />
+@* <form class="container"> *@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(m => m.Email)
+  <br/>
   @Html.TextBoxFor(m => m.Email)
-
+<hr/>
   @Html.LabelFor(m => m.Password)
+  <br/>
   @Html.PasswordFor(m => m.Password)
-
-  <input type="submit" value="Log in" class="btn btn-default" />
+<hr/>
+  <button type="submit" class="btn-info"><input type="submit" value="Log in" class="btn btn-default" /></button>
 }
+@* </form> *@
