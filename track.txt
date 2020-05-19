@@ -19,3 +19,5 @@ send out internship emails with resumes, cover letters and transcripts 125p
 searching gatsby docs and templates to start on tomorrow , will practice using in a separate project in the am tomorrow to get a flow and understanding of gatsby 440p
 
 working on gatsby tutorials 8a
+
+still fixing and finding bugs for routes 1105a
