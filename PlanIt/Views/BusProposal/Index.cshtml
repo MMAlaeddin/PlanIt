@@ -6,14 +6,15 @@
 @using System.Security.Claims
 @model IEnumerable<PlanIt.Models.BusProposal>
 
-<h1>Proposals for @User.Identity.Name</h1>
+<h1 class="welcome">Welcome @User.Identity.Name</h1>
+<h2 class="busPlanIndex">Your Business Plans: </h2>
 
 @if (Model.Any())
 {
   <ul>
     @foreach (BusProposal busProposal in Model)
     {
-      <li>@Html.ActionLink($"{busProposal.BusProposalTitle}", "Details", new { id = busProposal.BusProposalId })</li>
+      <button><p>@Html.ActionLink($"{busProposal.BusProposalTitle}", "Details", new { id = busProposal.BusProposalId })</p></button>
     }
   </ul>
 } 
