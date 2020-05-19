@@ -17,14 +17,12 @@ namespace PlanIt.Controllers
     private readonly PlanItContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
 
-    //updated constructor
-    public BusProposalController(UserManager<ApplicationUser> userManager, PlanItContext db)
+    public BusProposalController(UserManager<ApplicationUser> UserManager, PlanItContext db)
     {
-      _userManager = userManager;
+      _userManager = UserManager;
       _db = db;
     }
 
-    //updated Index method
     public async Task<ActionResult> Index()
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -35,7 +33,7 @@ namespace PlanIt.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.ExecSummaryId = new SelectList(_db.ExecSummaries, "ExecSummaryId", "Name");
+      ViewBag.ExecSummaryId = new SelectList(_db.ExecSummaries, "ExecSummaryId", "ExecSummaryTitle");
       return View();
     }
 
@@ -83,7 +81,7 @@ namespace PlanIt.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult AddCategory(int id)
+    public ActionResult AddExecSummary(int id)
     {
       var thisBusProposal = _db.BusProposals.FirstOrDefault(busProposals => busProposals.BusProposalId == id);
       ViewBag.ExecSummaryId = new SelectList(_db.ExecSummaries, "ExecSummaryId", "Name");
@@ -91,7 +89,7 @@ namespace PlanIt.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddCategory(BusProposal busProposal, int ExecSummaryId)
+    public ActionResult AddExecSummary(BusProposal busProposal, int ExecSummaryId)
     {
       if (ExecSummaryId != 0)
       {
@@ -117,7 +115,7 @@ namespace PlanIt.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteCategory(int joinId)
+    public ActionResult DeleteExecSummary(int joinId)
     {
       var joinEntry = _db.ExecSummaryBusProposal.FirstOrDefault(entry => entry.ExecSummaryBusProposalId == joinId);
       _db.ExecSummaryBusProposal.Remove(joinEntry);
