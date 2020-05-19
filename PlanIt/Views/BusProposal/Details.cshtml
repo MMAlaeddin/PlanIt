@@ -29,6 +29,6 @@ else
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit BusProposal", "Edit", new { id = Model.BusProposalId })</p>
-<p>@Html.ActionLink("Add a ExecSummary", "AddExecSummary", new { id = Model.BusProposalId })</p>
-<p>@Html.ActionLink("Delete BusProposal", "Delete", new { id = Model.BusProposalId })</p>
+@* <p>@Html.ActionLink("Edit BusProposal", "Edit", new { id = Model.BusProposalId })</p> *@
+<p>@Html.ActionLink("Add an Executive Summary", "AddExecSummary", new { id = Model.BusProposalId })</p>
+<p>@Html.ActionLink("Delete this Proposal", "Delete", new { id = Model.BusProposalId })</p>
