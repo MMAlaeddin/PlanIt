@@ -21,3 +21,5 @@ searching gatsby docs and templates to start on tomorrow , will practice using i
 working on gatsby tutorials 8a
 
 still fixing and finding bugs for routes 1105a
+
+working on gatsby and will follow up with bugs later 1130a
