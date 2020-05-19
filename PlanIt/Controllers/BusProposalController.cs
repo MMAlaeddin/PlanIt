@@ -15,11 +15,11 @@ namespace PlanIt.Controllers
   public class BusProposalController : Controller
   {
     private readonly PlanItContext _db;
-    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager; 
 
-    public BusProposalController(UserManager<ApplicationUser> UserManager, PlanItContext db)
+    public BusProposalController(UserManager<ApplicationUser> userManager, PlanItContext db)
     {
-      _userManager = UserManager;
+      _userManager = userManager;
       _db = db;
     }
 
@@ -27,8 +27,8 @@ namespace PlanIt.Controllers
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
-      var userBusProposals = _db.BusProposals.Where(entry => entry.User.Id == currentUser.Id);
-      return View(userBusProposals);
+      var userProposals = _db.BusProposals.Where(entry => entry.User.Id == currentUser.Id);
+      return View(userProposals);
     }
 
     public ActionResult Create()
@@ -37,7 +37,6 @@ namespace PlanIt.Controllers
       return View();
     }
 
-    //updated Create post method
     [HttpPost]
     public async Task<ActionResult> Create(BusProposal busProposal, int ExecSummaryId)
     {
@@ -115,7 +114,7 @@ namespace PlanIt.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteExecSummary(int joinId)
+    public ActionResult DeleteProposal(int joinId)
     {
       var joinEntry = _db.ExecSummaryBusProposal.FirstOrDefault(entry => entry.ExecSummaryBusProposalId == joinId);
       _db.ExecSummaryBusProposal.Remove(joinEntry);
