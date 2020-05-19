@@ -14,11 +14,11 @@
 }
 else
 {
-  <h4>BusProposals the category contains:</h4>
+  <h4>Proposal this summary belongs to:</h4>
   <ul>
   @foreach(var join in Model.BusProposals)
   {
-    <li>@join.Busproposal.BusProposalTitle</li>
+    <li><a href="PlanIt/BusProposal/Details.cs">@join.Busproposal.BusProposalTitle</a></li>
   }
   </ul>
 }

@@ -26,7 +26,7 @@ else
     @using (Html.BeginForm("DeleteExecSummary", "BusProposals"))
     {
       @Html.Hidden("joinId", @join.ExecSummaryBusProposalId)
-      <input type="submit" value="Delete"/>
+      @* <input type="submit" value="Delete"/> *@
     }
   }
   </ul>
