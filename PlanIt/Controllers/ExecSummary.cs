@@ -3,7 +3,6 @@ using PlanIt.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
 
 namespace PlanIt.Controllers
 {
@@ -39,7 +38,7 @@ namespace PlanIt.Controllers
     {
       var thisExecSummary = _db.ExecSummaries
           .Include(execSummary => execSummary.BusProposals)
-          .ThenInclude(join => join.BusProposal)
+          .ThenInclude(join => join.Busproposal)
           .FirstOrDefault(execSummary => execSummary.ExecSummaryId == id);
       return View(thisExecSummary);
     }
