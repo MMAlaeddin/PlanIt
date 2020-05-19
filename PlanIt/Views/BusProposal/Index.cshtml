@@ -14,7 +14,7 @@
   <ul>
     @foreach (BusProposal busProposal in Model)
     {
-      <button><p>@Html.ActionLink($"{busProposal.BusProposalTitle}", "Details", new { id = busProposal.BusProposalId })</p></button>
+      <button type="submit" class="btn btn-warning"><p>@Html.ActionLink($"{busProposal.BusProposalTitle}", "Details", new { id = busProposal.BusProposalId })</p></button>
     }
   </ul>
 } 
@@ -23,7 +23,7 @@ else
   <h3>No proposals have been added yet!</h3>
 }
 
-<p>@Html.ActionLink("Add new proposal", "Create")</p>
+<button type="submit" class="btn btn-info"><p>@Html.ActionLink("Add new proposal", "Create")</p></button>
 
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("Build a Summary", "Index", "ExecSummary")</p>
+<button type="submit" class="btn btn-info"><p>@Html.ActionLink("Home", "Index", "Home")</p></button>
+<button type="submit" class="btn btn-info"><p>@Html.ActionLink("Build a Summary", "Index", "ExecSummary")</p></button>

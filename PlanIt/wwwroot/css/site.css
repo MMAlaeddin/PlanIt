@@ -68,7 +68,6 @@ body {
   height: auto;
 }
 
-#propDetails {
-  text-align: center;
+button {
+  border-radius: 4px;
 }
-

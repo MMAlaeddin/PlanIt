@@ -10,6 +10,7 @@
 
 @using (Html.BeginForm())
 {
+  
   @Html.HiddenFor(model => model.ExecSummaryId)
   @Html.LabelFor(model => model.ExecSummaryTitle)
   @Html.EditorFor(model => model.ExecSummaryTitle)
@@ -22,4 +23,4 @@
 
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to Stylists", "Index")</p>
+<p>@Html.ActionLink("Back to Summaries", "Index")</p>
