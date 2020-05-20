@@ -6,10 +6,10 @@
 
 <div class="container-fluid">
 <div class="jumbotron">
-<h2 class="propDetails">Proposal Details</h2>
+<h1 class="propDetails">@Html.DisplayFor(model => model.BusProposalTitle)'s</h1> <h4>Proposal Details</h4>
 </div>
 <hr />
-<h3>Proposal: @Html.DisplayFor(model => model.BusProposalTitle)</h3>
+@* <h3>Proposal: @Html.DisplayFor(model => model.BusProposalTitle)</h3> *@
 
 @if(@Model.ExecSummaries.Count == 0)
 {
@@ -17,18 +17,22 @@
 }
 else
 {
-  <h4>Summaries for this proposal:</h4>
+  <h5>Your proposal Executive Summary:</h5>
   <ul>
   @foreach(var join in Model.ExecSummaries)
   {
 
 <div class="list-group">
-  <p class="list-group-item-success active"><a href="ExecSummary/Details.cshtml">@join.ExecSummary.ExecSummaryTitle</a></p></div>
+  <p class="list-group-item-success active"><a href="ExecSummary/Details.cshtml">@join.ExecSummary.ExecSummaryTitle</a></p>
+  <p>@join.ExecSummary.Intro</p>
+  <p>@join.ExecSummary.Problem</p>
+  <p>@join.ExecSummary.Finance</p>
+  </div>
 
     @using (Html.BeginForm("DeleteExecSummary", "BusProposals"))
     {
       @Html.Hidden("joinId", @join.ExecSummaryBusProposalId)
-      @* <input type="submit" value="Delete"/> *@
+
     }
   }
   
