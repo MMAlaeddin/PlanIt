@@ -27,3 +27,5 @@ working on gatsby and will follow up with bugs later 1130a
 Installed gatsby, created new repo but would not allow me to push to repo.  Found instructions for Git LFS and installed but still nothing is working.  Moving back a step and working on UI in original file 12p 
 
 break and work on gatsby resolution 345p
+
+watching short styling tutorials 9a
