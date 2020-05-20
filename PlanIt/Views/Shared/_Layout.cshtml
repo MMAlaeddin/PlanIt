@@ -28,18 +28,25 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Sign In</a>
-      <a class="dropdown-item" href="#">Register</a>
-      <a class="dropdown-item" href="#">Delete My Account</a>
+      <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Go Home</a>
+      <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Login">Sign In</a>
+      <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+      <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Index">Delete My Account</a>
     </div>
     <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documents</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">State Registration</a>
-      <a class="dropdown-item" href="#">Federal Registration</a>
-      <a class="dropdown-item" href="#">Proposal Prep</a>
-      <a class="dropdown-item" href="#">Privacy</a>
-
+      <a class="dropdown-item" href="https://sos.oregon.gov/business/Pages/domestic-business-corporation-forms.aspx">State Registration</a>
+      <a class="dropdown-item" href="https://www.sba.gov/business-guide/launch-your-business/get-federal-state-tax-id-numbers">Federal Registration</a>
+      <a class="dropdown-item" href="https://www.entrepreneur.com/article/247575">Proposal Prep</a>
+      <a class="dropdown-item" href="https://nondisclosureagreement.com/">Privacy</a>
+    </div>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Proposals</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="https://www.entrepreneur.com/article/247575">Start Building a Proposal</a>
+      <a class="dropdown-item" href="https://www.inc.com/guides/2010/09/how-to-write-an-executive-summary.html">What's an Executive Summary?</a>
+      <a class="dropdown-item" href="https://www.businessnewsdaily.com/4686-how-to-start-a-business.html">Tips</a>
     </div>
   </li>
 </ul>
