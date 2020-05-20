@@ -21,7 +21,30 @@
   </head>
   <body>
     <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#"><span class="planColor">Plan</span><span class="itColor">It</span></a></a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Sign In</a>
+      <a class="dropdown-item" href="#">Register</a>
+      <a class="dropdown-item" href="#">Delete My Account</a>
+    </div>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documents</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">State Registration</a>
+      <a class="dropdown-item" href="#">Federal Registration</a>
+      <a class="dropdown-item" href="#">Proposal Prep</a>
+      <a class="dropdown-item" href="#">Privacy</a>
+
+    </div>
+  </li>
+</ul>
+
+    @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
       <div class="container">
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="navTitle"><span class="planColor">Plan</span><span class="itColor">It</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -36,27 +59,19 @@
             <li class="nav-item">
               <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Index">Sign In</a>
             </li>
-                 @* <li class="nav-item">
-              <a class="nav-link text-dark" asp-area="" asp-controller="BusProposal" asp-action="Index">Legal Documents</a>
-            </li>  *@
              <li class="nav-item">
               <a class="nav-link text-dark" asp-area="" asp-controller="BusProposal" asp-action="Index">Build My Proposal!</a>
             </li> 
           </ul>
         </div>
       </div>
-      </nav>
+      </nav> *@
     <div class="container">
       <partial name="_CookieConsentPartial" />
       <main role="main" class="pb-3">
         @RenderBody()
       </main>
     </div>
-    @* <footer class="border-top footer text-muted">
-      <div class="container">
-        &copy; 2020 - PlanIt - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-      </div>
-    </footer> *@
     <environment include="Development">
       <script src="~/lib/jquery/dist/jquery.js"></script>
       <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -77,3 +92,5 @@
     @RenderSection("Scripts", required: false)
   </body>
 </html>
+
+
