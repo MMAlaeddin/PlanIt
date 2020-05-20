@@ -12156,11 +12156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/PlanIt.csproj",
+      "projectUniqueName": "/Users/mariamalaeddin/Desktop/PlanIt/PlanIt/PlanIt.csproj",
       "projectName": "PlanIt",
-      "projectPath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/PlanIt.csproj",
+      "projectPath": "/Users/mariamalaeddin/Desktop/PlanIt/PlanIt/PlanIt.csproj",
       "packagesPath": "/Users/mariamalaeddin/.nuget/packages/",
-      "outputPath": "/Users/mariamalaeddin/Desktop/PlanItCapstone/PlanIt/obj/",
+      "outputPath": "/Users/mariamalaeddin/Desktop/PlanIt/PlanIt/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
