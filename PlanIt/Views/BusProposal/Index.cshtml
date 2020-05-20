@@ -7,7 +7,7 @@
 
 
 @model IEnumerable<PlanIt.Models.BusProposal>
-
+<div class="container-fluid">
 <div class="jumbotron">
 <h1 class="welcome">Welcome @User.Identity.Name</h1>
 <h2 class="busPlanIndex">Your Business Plans: </h2>
@@ -30,3 +30,4 @@ else
 
 <button type="submit" class="btn-outline-info"><p>@Html.ActionLink("Home", "Index", "Home")</p></button>
 <button type="submit" class="btn-outline-info"><p>@Html.ActionLink("Build a Summary", "Index", "ExecSummary")</p></button>
+</div>

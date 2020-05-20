@@ -4,6 +4,7 @@
 
 @model PlanIt.Models.BusProposal
 
+<div class="container-fluid">
 <div class="jumbotron">
 <h2 class="propDetails">Proposal Details</h2>
 </div>
@@ -21,7 +22,8 @@ else
   @foreach(var join in Model.ExecSummaries)
   {
 
-    <li><a href="ExecSummary/Details.cshtml">@join.ExecSummary.ExecSummaryTitle</a></li>
+<div class="list-group">
+  <p class="list-group-item-success active"><a href="ExecSummary/Details.cshtml">@join.ExecSummary.ExecSummaryTitle</a></p></div>
 
     @using (Html.BeginForm("DeleteExecSummary", "BusProposals"))
     {
@@ -29,10 +31,13 @@ else
       @* <input type="submit" value="Delete"/> *@
     }
   }
+  
   </ul>
 }
 
-<p><button type="submit" class="btn btn-warning">@Html.ActionLink("Back to list", "Index")</p></button>
+<p><button type="submit" class="btn-outline-info">@Html.ActionLink("Back to list", "Index")</p></button>
 @* <p>@Html.ActionLink("Edit BusProposal", "Edit", new { id = Model.BusProposalId })</p> *@
-<p><button type="submit" class="btn btn-warning">@Html.ActionLink("Add an Executive Summary", "AddExecSummary", new { id = Model.BusProposalId })</button></p>
-<p><button type="submit" class="btn btn-warning">@Html.ActionLink("Delete this Proposal", "Delete", new { id = Model.BusProposalId })</button></p>
+<p><button type="submit" class="btn-outline-info">@Html.ActionLink("Add an Executive Summary", "AddExecSummary", new { id = Model.BusProposalId })</button></p>
+<p><button type="submit" class="btn-outline-info">@Html.ActionLink("Delete this Proposal", "Delete", new { id = Model.BusProposalId })</button></p>
+
+</div>
