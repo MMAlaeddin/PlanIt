@@ -84,6 +84,10 @@ _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 _Run this MVC application by entering the following command in Terminal (macOS) or PowerShell (Windows) at the root of the PlanIt directory:_
 * ``dotnet run`` or ``dotnet watch run``
 
+## Known Bugs
+
+Identity and Authentication is not recognizing credentials
+
 ## **Technologies Used**
 
 * Git
@@ -100,10 +104,15 @@ _Run this MVC application by entering the following command in Terminal (macOS) 
 * HTML/CSS
 * Razor
 
-## Future Technologies and Plans
+## Future Technologies
 
 * Gatsby - FrontEnd 
 * DocuSign API - User ability to look up legal docs necessary to start business locally
 * JWT - Security
 
 
+## License
+
+Licensed under the MIT license.
+
+&copy; 2020 - Mariam Alaeddin
