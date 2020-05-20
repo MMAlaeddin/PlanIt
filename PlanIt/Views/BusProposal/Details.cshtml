@@ -17,16 +17,16 @@
 }
 else
 {
-  <h5>Your proposal Executive Summary:</h5>
+  <h5><strong>Your proposal Executive Summary:</strong></h5>
   <ul>
   @foreach(var join in Model.ExecSummaries)
   {
 
 <div class="list-group">
   <p class="list-group-item-success active"><a href="ExecSummary/Details.cshtml">@join.ExecSummary.ExecSummaryTitle</a></p>
-  <p>@join.ExecSummary.Intro</p>
-  <p>@join.ExecSummary.Problem</p>
-  <p>@join.ExecSummary.Finance</p>
+  <p class="list-group-item">@join.ExecSummary.Intro</p>
+  <p class="list-group-item">@join.ExecSummary.Problem</p>
+  <p class="list-group-item">@join.ExecSummary.Finance</p>
   </div>
 
     @using (Html.BeginForm("DeleteExecSummary", "BusProposals"))
