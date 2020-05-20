@@ -33,3 +33,5 @@ watching short styling tutorials 9a
 working on multiple issues on computer that required me to shut it down before pushing , had to clone project and now sorting out issues from restore and building 11a :(
 
 log in issues, working on finding them. 1p
+
+trying to work on bug with authentication again.  wish me luck or wish me death. 4p
