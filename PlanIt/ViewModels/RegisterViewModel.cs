@@ -4,10 +4,10 @@ namespace PlanIt.ViewModels
 {
   public class RegisterViewModel
   {
-    [Required]
-    [DataType(DataType.Text)]
-    [Display(Name = "Full name")]
-    public string Name { get; set; }
+    // [Required]
+    // [DataType(DataType.Text)]
+    // [Display(Name = "Full name")]
+    // public string Name { get; set; }
 
     [Required]
     [EmailAddress]

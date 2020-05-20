@@ -5,19 +5,32 @@
 @using PlanIt.ViewModels
 
 @model RegisterViewModel
-
+<div class="container">
 <h2>Register Here!</h2>
 <hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
-    @Html.LabelFor(user => user.Email)
-    @Html.TextBoxFor(user=> user.Email)
-
-    @Html.LabelFor(user=> user.Password)
+    <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+  </div>    
+  @Html.TextBoxFor(user=> user.Email)
+    </div>
+    <br/>
+    <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Password</span>
+  </div>
     @Html.PasswordFor(user=> user.Password)
-
-    @Html.LabelFor(user=> user.ConfirmPassword)
+    </div>
+    <br/>
+    <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Confirm Password</span>
+  </div>
     @Html.PasswordFor(user=> user.ConfirmPassword)
-
-    <input type="submit" value="Register" />
-}
+    </div>
+  <br/>
+    <button class="btn-success" type="submit">Sign Me Up!</button>
+} 
+</div>

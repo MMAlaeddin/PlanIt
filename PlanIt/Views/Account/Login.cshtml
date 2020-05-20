@@ -10,18 +10,31 @@
 <h2>Log in with your account</h2>
 </div>
 <hr />
-@* <form class="container"> *@
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(m => m.Email)
+  @* @Html.LabelFor(m => m.Email) *@
   <br/>
-  @Html.TextBoxFor(m => m.Email)
+  <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+  </div>
+@Html.TextBoxFor(m => m.Email)
+</div>
 <hr/>
-  @Html.LabelFor(m => m.Password)
+  @* @Html.LabelFor(m => m.Password) *@
   <br/>
+    <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Password</span>
+  </div>
   @Html.PasswordFor(m => m.Password)
+    </div>
 <hr/>
-@* <a asp-controller="BusProposal" asp-action="Index">Log In</a> *@
-  <button type="submit" class="btn-info"><input type="submit" value="Log in" class="btn btn-default" /></button>
+<input type="submit" value="Log in" class="btn btn-default" />
 }
-@* </form> *@
+@* <div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+  </div>
+  <input type="text" class="form-control" placeholder="ThisIsntWorking@dreadful.com" aria-label="Email" aria-describedby="addon-wrapping">
+</div> *@
